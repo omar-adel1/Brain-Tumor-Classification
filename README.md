@@ -1,4 +1,4 @@
-# Brain Tumor MRI Classification
+# Brain Tumor Classification
 
 This project implements a deep learning model for classifying brain tumors using MRI images. The model differentiates between four classes: glioma, meningioma, no tumor, and pituitary tumor.
 
