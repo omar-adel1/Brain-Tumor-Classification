@@ -1,10 +1,19 @@
 # Brain Tumor Classification & Segmentation
 
-# Classification
+## Table of Contents
+
+1. [Classification](#classification)
+   - [About the Dataset](#about-the-dataset)
+2. [Segmentation](#segmentation)
+   - [About the Dataset](#about-the-dataset-1)
+   - [U-Net Model Architecture](#u-net-model-architecture)
+---
+
+## Classification
 
 This project implements a deep learning model for classifying brain tumors using MRI images. The model differentiates between four classes: glioma, meningioma, no tumor, and pituitary tumor.
 
-## About the Dataset
+### About the Dataset
 
 This dataset is a combination of the following three datasets:
 - **figshare**
@@ -21,13 +30,13 @@ The **no tumor** class images were sourced from the **Br35H** dataset. It was no
 
 ---
 
-# Segmentation
+## Segmentation
 
 This project implements a deep learning model for segmenting brain tumors in MRI images. The segmentation model uses a **U-Net** architecture to identify tumor regions in brain MRIs, specifically lower-grade gliomas. The dataset contains MRI images with manual FLAIR abnormality segmentation masks for training and validation.
 
-## About the Dataset
+### About the Dataset
 
-### LGG Segmentation Dataset
+#### LGG Segmentation Dataset
 
 The dataset used in this project was introduced in the following publications:
 - **Mateusz Buda, Ashirbani Saha, Maciej A. Mazurowski**. "Association of genomic subtypes of lower-grade gliomas with shape features automatically extracted by a deep learning algorithm." *Computers in Biology and Medicine*, 2019.
@@ -42,3 +51,8 @@ This dataset includes:
 The data is sourced from **The Cancer Imaging Archive (TCIA)** and corresponds to the lower-grade glioma collection from **The Cancer Genome Atlas (TCGA)**.
 
 For more details on the genomic data, please refer to the supplementary materials in this publication: [Comprehensive, Integrative Genomic Analysis of Diffuse Lower-Grade Gliomas](https://www.nejm.org/doi/full/10.1056/NEJMoa1402121).
+
+### U-Net Model Architecture
+
+For the segmentation task, the **U-Net** architecture is used to identify tumor regions in MRI images. The network follows an encoder-decoder structure, with skip connections between the encoder and decoder layers to retain spatial information. The model is trained using the segmentation masks for tumor regions.
+
